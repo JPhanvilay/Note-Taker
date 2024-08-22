@@ -1,5 +1,5 @@
-const pageRouter = require("path");
-const router = require("express").Router();
+const path = require("path");
+const pageRouter = require("express").Router();
 
 // Route to get to notes page.
 pageRouter.get("/notes", (req, res) => {
@@ -7,7 +7,7 @@ pageRouter.get("/notes", (req, res) => {
 });
 
 // Route to get to homepage and send to user.
-pageRouter.get("*", (req, res) => {
+pageRouter.get("/", (req, res) => {
  res.sendFile(path.join(__dirname, "../public/index.html"));
 });
 
